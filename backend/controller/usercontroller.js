@@ -1,6 +1,6 @@
 import {v2 as cloudinary} from 'cloudinary'
 import User from '../model/user.js'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose';
 import Message from '../model/message.js'
