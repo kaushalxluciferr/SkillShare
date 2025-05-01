@@ -34,7 +34,7 @@ const {user}=useContext(AppContext)
       <Route path='/myprofile' element={token?<UserProfile/>:<Login/>}/>
       <Route path='/signup' element={<SignUp/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/allApplicant' element={<Allusers/>}/>
+      <Route path='/allApplicant' element={token?<Allusers/>:<Login/>}/>
     </Routes>
     {
       token &&

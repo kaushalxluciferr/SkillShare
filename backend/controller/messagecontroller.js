@@ -178,4 +178,25 @@ export const getUserDetails = async (req, res) => {
       });
     }
   };
+
+
+  export const deletemsg=async(req,res)=>{
+    try{
+const{id}=req.body
+
+await Message.findByIdAndDelete(id)
+return res.json({
+  success:true,
+  message:"deleted successfully"
+})
+
+    }catch(error)
+    {
+      return res.json({
+        success:false,
+        message:error.message
+      })
+    }
+
+  }
   

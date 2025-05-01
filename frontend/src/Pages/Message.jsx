@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import { Send, MessageCircle, ArrowLeft, Search } from 'lucide-react';
+import { Send, MessageCircle, ArrowLeft, Search, Edit, Delete } from 'lucide-react';
 import { AppContext } from '../context/Appcontext';
 
 function Message() {
@@ -183,6 +183,38 @@ function Message() {
     }
   }, [id, user?._id]);
 
+const handledelete=async(id)=>{
+  try{
+    const {data}=await axios.post(backendurl1+"/delete",{id},{
+      headers:{
+        token:usertoken
+      }
+    })
+    if(data.success)
+    {
+      toast.success("deleted successfully")
+      window.location.reload()
+    }
+  }catch(error)
+  {
+    toast.error(error.message)
+  }
+}
+
+
+const handleedit=async(id)=>{
+  try{
+console.log(id);
+
+  }catch(error)
+  {
+    toast.error(error.message)
+  }
+}
+
+
+
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -300,8 +332,7 @@ function Message() {
               ) : (
                 <div className="space-y-4">
                   {messages.map((msg) => (
-                    <div
-                      key={msg._id}
+                    <div key={msg._id}
                       className={`flex ${
                         msg.sender?._id === currentUserId ? 'justify-end' : 'justify-start'
                       }`}
@@ -324,14 +355,16 @@ function Message() {
                           </div>
                         )}
                         <p>{msg.content}</p>
-                        <p className={`text-xs mt-1 text-right ${
+                        <p className={`text-xs mt-1 text-right flex items-center gap-2 ${
                           msg.sender?._id === currentUserId ? 'text-blue-100' : 'text-gray-500'
                         }`}>
                           {new Date(msg.createdAt).toLocaleTimeString([], {
                             hour: '2-digit',
                             minute: '2-digit'
                           })}
+                           <Delete onClick={()=>handledelete(msg._id)} className='w-[20px] cursor-pointer'/>
                           {msg.isOptimistic && ' (Sending...)'}
+
                         </p>
                       </div>
                     </div>
