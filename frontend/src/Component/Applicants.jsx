@@ -22,7 +22,7 @@ const filteruser=useMemo(()=>{
 
 
   return (
-    <div>
+    <div className='p-4'>
 <div className='flex items-center justify-center mt-5'>
       <h1 className='text-2xl font-bold underline'><span className='text-red-600'>Top Eight</span> Applicants <span className='text-green-600'>Here</span></h1>
         </div>

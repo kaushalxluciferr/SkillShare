@@ -11,7 +11,7 @@ const useriid=allmessageuser[n]
 
 const handlelogout=()=>{
   localStorage.removeItem("usertoken")
-  navigate("/login")
+  navigate("/")
   window.location.reload()
 }
 
@@ -20,7 +20,7 @@ const handlelogout=()=>{
      
      <div className='bg-blue-800 p-2 rounded-md'>
 <h1 className='text-white  text-2xl font-bold cursor-pointer' 
-onClick={()=>navigate('/')}
+onClick={()=>navigate('/home')}
 >SkillShare</h1>
      </div>
      <div>

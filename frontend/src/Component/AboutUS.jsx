@@ -3,11 +3,11 @@ import React from 'react'
 
 function AboutUS() {
   return (
-    <div>
+    <div className='p-4'>
       <div className='flex justify-center'>
         <h1 className='text-4xl font-bold underline'>About Us</h1>
       </div>
-      <div className='p-4 bg-gray-600 rounded-md mt-4 flex justify-between'>
+      <div className='p-4 bg-[#242424] rounded-md mt-4 flex justify-between'>
         <div className='text-white'>
             <h1 className='text-xl font-bold underline'>Want to know About us?</h1>
 
@@ -16,13 +16,13 @@ function AboutUS() {
 </p>
         </div>
         <div className='text-white mr-20'>
-            <div className=' underline text-xl font-bold flex gap-2 cursor-pointer'>
+            <div className=' underline text-xl font-bold flex items-center gap-2 cursor-pointer'>
 <h2><PhoneCall/></h2>
             <h2>Contact US</h2>
             </div>
             <div className='mt-4 cursor-pointer'>
-            <p>Gmail: Kaushalrauniyar1@gmail.com</p>
-            <p>PhoneNO: 8235914724</p>
+            <p>Gmail: kaushalrauniyar1@gmail.com</p>
+            <p>Phone-N.O: 8235914724</p>
 
             </div>
         </div>

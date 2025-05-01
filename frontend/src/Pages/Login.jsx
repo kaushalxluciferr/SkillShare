@@ -23,7 +23,7 @@ if(data.success)
   localStorage.setItem("usertoken",data.token)
   toast.success(data.message)
   toast.success("Login Successfull")
-  navigate("/")
+  navigate("/home")
   scrollTo(0,0)
   window.location.reload()
 

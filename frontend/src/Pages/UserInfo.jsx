@@ -47,7 +47,9 @@ function UserInfo() {
   const relatedUsers = getRelatedUsers();
 
   return (
-    <div className="mt-8 p-4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-lg shadow-lg text-white">
+    <div className='p-4 -mt-4'>
+
+    <div className="mt-4 p-4 bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg shadow-lg text-white">
       {user ? (
         <>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 p-4">
@@ -64,7 +66,7 @@ function UserInfo() {
 <MessageCircle/>
 </div>
               </div>
-              <p className="text-lg text-center md:text-left bg-black px-4 py-2 rounded-md mb-4">{user?.email}</p>
+              <p className="text-lg text-center md:text-left bg-black mt-2 px-4 py-2 rounded-md mb-4">{user?.email}</p>
 
               <div>
                 <h2 className="text-2xl font-semibold underline mb-2">Skills:</h2>
@@ -88,13 +90,13 @@ function UserInfo() {
             </div>
           </div>
 
-          <div className="mt-8 bg-white text-gray-800 p-6 rounded-md shadow-md">
+          <div className="mt-8 bg-teal-800 text-white p-6 rounded-xl shadow-md">
             <h2 className="text-2xl font-bold underline mb-4">Description:</h2>
-            <p className="text-lg">{user?.description || "No description available."}</p>
+            <p className="text-lg ml-4 font-serif">{user?.description || "No description available."}</p>
           </div>
 
           <div className="mt-12">
-            <h2 className="text-3xl font-bold underline mb-6 text-center">Users with Similar Skills</h2>
+            <h2 className="text-4xl text-blue-400 font-serif font-bold  mb-6 text-center">Users with Similar Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedUsers.length > 0 ? (
                 relatedUsers.map((item, index) => (
@@ -107,7 +109,7 @@ function UserInfo() {
                       src={item.image}
                       className="w-full h-[200px] object-cover rounded-md mb-4"
                       alt={item.name}
-                    />
+                      />
                     <h3 className="text-xl font-bold text-center mb-2">{item.name}</h3>
 
                     <div className="mb-4">
@@ -141,6 +143,7 @@ function UserInfo() {
         <p className="text-center text-2xl mt-12">Loading user information...</p>
       )}
     </div>
+      </div>
   );
 }
 

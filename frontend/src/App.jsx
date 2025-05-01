@@ -13,6 +13,7 @@ import Login from './Pages/Login'
 import { useContext } from 'react'
 import { AppContext } from './context/Appcontext'
 import Allusers from './Pages/Allusers'
+import LandingPage from './Pages/LandingPage'
 
 function App() {
 
@@ -22,13 +23,16 @@ const {user}=useContext(AppContext)
 
 // s
   return (
-    <div className='p-4 '>
+    <div className=''>
+      <div className='p-4'>
       {
         token&& 
         <Navbar/>
       }
+      </div>
     <Routes>
-      <Route path='/' element={token?<Home/>:<Login/>}/>
+      <Route path='/' element={<LandingPage/>}/>
+      <Route path='/home' element={token?<Home/>:<Login/>}/>
       <Route path='/message/:id' element={token?<Message/>:<Login/>}/>
       <Route path='/profile/:id' element={token?<UserInfo/>:<Login/>}/>
       <Route path='/myprofile' element={token?<UserProfile/>:<Login/>}/>
