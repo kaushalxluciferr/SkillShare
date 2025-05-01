@@ -42,7 +42,7 @@ const scrollToSection = (ref) => {
     Connect with others who share your interests and learn ft-onn each other!</p>
   </div>
 <div className='mt-10 text-center'>
-  <button className='bg-blue-500 p-2 px-14 rounded-2xl font-serif font-bold text-xl text-white'>Get Started</button>
+  <button onClick={()=>navigate('/login')} className='bg-blue-500 p-2 px-14 rounded-2xl font-serif font-bold text-xl text-white'>Get Started</button>
 </div>
 </div>
 
