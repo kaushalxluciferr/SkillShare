@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { BookOpenCheck, DollarSign, GroupIcon, LucideGroup, LucideHome, PhoneCall, SaveOffIcon, ScanFaceIcon } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import SplineLogo from '../Component/SplineLogo'
 function LandingPage() {
 const benefitsRef=useRef(null)
 const howworkRef=useRef(null)
@@ -21,7 +22,7 @@ const scrollToSection = (ref) => {
             <h1 className=' text-xl font-bold text-blue-600 ' onClick={()=>scrollToSection(homeref)}>SkillShare</h1>
           </div>
           <div className='flex text-white  gap-6 items-center'>
-            <h1 className='shadow-white rounded-xl px-1 font-serif cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]' onClick={()=>scrollToSection(benefitsRef)}>Benefits</h1>
+            <h1 className='shadow-white rounded-xl px-1 p-2 font-serif cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]' onClick={()=>scrollToSection(benefitsRef)}>Benefits</h1>
             <h1 className='shadow-white rounded-xl px-1 p-2 font-serif cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]' onClick={()=>scrollToSection(howworkRef)}>How it Works</h1>
             <h1 className='shadow-white rounded-xl px-1 p-2 font-serif cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]' onClick={()=>scrollToSection(aboutmeRef)}>About Me</h1>
           </div>
@@ -31,24 +32,39 @@ const scrollToSection = (ref) => {
           
         </div>
       </div>
+{/* About Website */}
+<div ref={homeref} className="pt-16 -mt-10  text-white min-h-screen">
+  <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 lg:px-24 py-10 gap-10">
+    <div className="md:w-1/2 text-center md:text-left">
+      <h1 className="text-green-400 text-4xl md:text-5xl font-serif font-bold mb-6">
+        Connect, Learn, and <span className='ml-14 underline'>Grow Together
+          </span>
+      </h1>
+      <p className="text-lg font-serif leading-relaxed">
+        SkillShare is a platform where you can register your skills and what you want to learn. <br />
+        Connect with others who share your interests and learn from each other!
+      </p>
+      <div className="mt-8">
+        <button 
+          onClick={() => navigate('/login')} 
+          className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 px-8 py-3 rounded-full font-serif font-semibold text-lg"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
 
-{/* ABoout website */}
-<div  ref={homeref} className="pt-24"> {/* Add top padding */}
-  <div className='flex justify-center'>
-    <h1 className='text-center text-green-600 text-4xl font-serif mt-20 '>Connect, Learn, and Grow Together</h1>
+    {/* Spline Animation */}
+    <div className="md:w-1/2 w-full h-[300px] rounded-full md:h-[500px]">
+      <SplineLogo />
+    </div>
+
   </div>
-  <div className='text-center mt-5'>
-    <p className='text-white font-serif '>SkillShare is a platform where you can register your skills and what you want to learn. <br />
-    Connect with others who share your interests and learn ft-onn each other!</p>
-  </div>
-<div className='mt-10 text-center'>
-  <button onClick={()=>navigate('/login')} className='bg-blue-500 p-2 px-14 rounded-2xl font-serif font-bold text-xl text-white'>Get Started</button>
-</div>
 </div>
 
 {/* benefits section */}
 
-<div ref={benefitsRef} className='bg-slate-50 mt-20 rounded-md' >
+<div ref={benefitsRef} className='bg-slate-50 -mt-20 rounded-md' >
 <div className='flex justify-center mt-40'>
   <h1 className='text-center mt-20 text-3xl font-serif mb-10 font-bold'>why to choose SkillShare?</h1>
 </div>
@@ -118,7 +134,7 @@ engaging way.</h1>
     {/*  */}
     <div className='flex gap-3 border p-2 bg-white rounded-lg items-center'>
       <div className='rounded-full p-1'>
-        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>1</h1>
+        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>2</h1>
       </div>
       <div>
         <h1 className='text-xl font-bold'>Mention What You Want to Learn</h1>
@@ -129,7 +145,7 @@ engaging way.</h1>
     {/*  */}
     <div className='flex gap-3 border p-2 bg-white rounded-lg items-center'>
       <div className='rounded-full p-1'>
-        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>1</h1>
+        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>3</h1>
       </div>
       <div>
         <h1 className='text-xl font-bold'>Connect with Matches</h1>
@@ -140,7 +156,7 @@ engaging way.</h1>
     {/*  */}
     <div className='flex gap-3 border p-2 bg-white rounded-lg items-center'>
       <div className='rounded-full p-1'>
-        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>1</h1>
+        <h1 className='bg-gray-300 px-2 rounded-full text-red-700'>4</h1>
       </div>
       <div>
         <h1 className='text-xl font-bold'>Start Learning & Teaching</h1>
