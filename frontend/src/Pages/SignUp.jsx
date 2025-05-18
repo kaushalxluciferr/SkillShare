@@ -93,12 +93,12 @@ if(data.success)
 
 
   return (
-    <div className='p-6 flex flex-col justify-center min-h-screen rounded-lg bg-gradient-to-br from-blue-100 to-purple-200'>
-        <div className='bg-white shadow-2xl rounded-2xl p-6'>
+    <div className='p-6 flex flex-col justify-center min-h-screen -mt-10 rounded-lg bg-black'>
+        <div className='bg-gray-900 shadow-2xl rounded-2xl p-6'>
 
           <div className='flex justify-center mt-2 items-center gap-4'>
             <label htmlFor="image" className='flex flex-col items-center cursor-pointer'>
-            <h1 className='font-bold mb-2 text-gray-700'>Upload your image here</h1>
+            <h1 className='font-bold mb-2 text-green-500'>Upload your image here</h1>
                 <img className='w-[120px] h-[120px] object-cover rounded-full border-4 border-blue-400' src={image?URL.createObjectURL(image):"https://cdn-icons-png.flaticon.com/512/10337/10337609.png"} alt="" />
                 <input type="file" onChange={(e)=>setimage(e.target.files[0])} hidden name="image" id="image" />
             </label>
@@ -109,31 +109,31 @@ if(data.success)
           <div className='mt-6 space-y-6'>
 
           <div className='flex justify-center items-center'>
-            <h2 className='text-xl font-semibold text-gray-800'>Name:</h2>
-            <input value={name} onChange={(e)=>setname(e.target.value)} type="text" placeholder='Enter your name' className='ml-2 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-blue-400 w-1/2' />
+            <h2 className='text-xl font-semibold text-white'>Name:</h2>
+            <input value={name} onChange={(e)=>setname(e.target.value)} type="text" placeholder='Enter your name' className='ml-2 p-2 border rounded-lg outline-none bg-emerald-100 text-lg focus:ring-2 focus:ring-blue-400 w-1/2' />
           </div>
 
           <div className='flex justify-center items-center'>
-            <h2 className='text-xl font-semibold text-gray-800'>Email:</h2>
-            <input type="email" value={email} onChange={(e)=>setemail(e.target.value)} placeholder='Enter your Email' className='ml-2 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-blue-400 w-1/2' />
+            <h2 className='text-xl font-semibold text-white'>Email:</h2>
+            <input type="email" value={email} onChange={(e)=>setemail(e.target.value)} placeholder='Enter your Email' className='ml-2 p-2 border bg-emerald-100 rounded-lg outline-none text-lg focus:ring-2 focus:ring-blue-400 w-1/2' />
           </div>
 
           <div className='flex justify-center items-center'>
-            <h2 className='text-xl font-semibold text-gray-800'>Password:</h2>
-            <div className='flex border ml-2 items-center rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-blue-400'>
-              <input type={eyee ? "password" : "text"} value={password} onChange={(e)=>setpassword(e.target.value)} placeholder='Enter your Password' className='ml-2 p-2 rounded-lg outline-none text-lg bg-transparent w-72' />
+            <h2 className='text-xl font-semibold text-white'>Password:</h2>
+            <div className='flex border ml-2 items-center rounded-lg bg-emerald-100 focus-within:ring-2 focus-within:ring-blue-400'>
+              <input type={eyee ? "password" : "text"} value={password} onChange={(e)=>setpassword(e.target.value)} placeholder='Enter your Password' className='ml-2 p-2  rounded-lg outline-none text-lg bg-transparent w-72' />
               {
                   eyee ?
-                  <Eye onClick={()=>seteye(!eyee)} className='mt-2 mr-2 cursor-pointer text-gray-600'/> :
-                  <EyeOff onClick={()=>seteye(!eyee)} className='mt-2 mr-2 cursor-pointer text-gray-600'/>
+                  <Eye onClick={()=>seteye(!eyee)} className='mt-2 mr-2 cursor-pointer text-black'/> :
+                  <EyeOff onClick={()=>seteye(!eyee)} className='mt-2 mr-2 cursor-pointer text-black'/>
               }
             </div>
           </div>
 
           {/* Skill section */}
           <div className='flex justify-center items-center'>
-            <h2 className='text-xl font-semibold text-gray-800'>Add Skill:</h2>
-            <input type="text" value={newskill} onChange={(e)=>setnewskill(e.target.value)} placeholder='Enter your Skill one by one' className='ml-2 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-green-400 w-1/2' />
+            <h2 className='text-xl font-semibold text-white'>Add Skill:</h2>
+            <input type="text" value={newskill} onChange={(e)=>setnewskill(e.target.value)} placeholder='Enter your Skill one by one' className='ml-2 bg-emerald-100 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-green-400 w-1/2' />
             <button className='ml-4 bg-green-500 hover:bg-green-600 transition p-2 rounded-lg text-white font-bold px-6' onClick={addskill}>Add</button>
           </div>
 
@@ -152,8 +152,8 @@ if(data.success)
 
           {/* Learn section */}
           <div className='flex justify-center items-center'>
-            <h2 className='text-xl font-semibold text-gray-800'>Want To Learn:</h2>
-            <input type="text" value={newlearn} onChange={(e)=>setnewlearn(e.target.value)} placeholder='What you want to learn' className='ml-2 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-indigo-400 w-1/2' />
+            <h2 className='text-xl font-semibold text-white'>Want To Learn:</h2>
+            <input type="text" value={newlearn} onChange={(e)=>setnewlearn(e.target.value)} placeholder='What you want to learn' className='ml-2 bg-emerald-100 p-2 border rounded-lg outline-none text-lg focus:ring-2 focus:ring-indigo-400 w-1/2' />
             <button className='ml-4 bg-indigo-500 hover:bg-indigo-600 transition p-2 rounded-lg text-white font-bold px-6' onClick={addlearn}>Add</button>
           </div>
 
@@ -172,7 +172,7 @@ if(data.success)
 
           {/* Description */}
   <div className='flex justify-center items-center'>
-         <h2 className='text-xl font-semibold text-gray-800'>Description:</h2>
+         <h2 className='text-xl font-semibold text-white'>Description:</h2>
        <textarea className='rounded-md ml-4 h-[200px] w-1/2 mb-4 border border-gray-300 outline-none p-3 text-lg focus:ring-2 focus:ring-purple-400 resize-none shadow-inner' value={description} onChange={(e)=>setdescription(e.target.value)} />
           </div>
 
@@ -183,7 +183,7 @@ if(data.success)
 
           {/* Already have account */}
           <div className='flex justify-center items-center mb-6'>
-            <p className='text-gray-700'>Already have account? <span onClick={()=>navigate('/login')} className='text-blue-700 underline cursor-pointer hover:text-blue-900'>Login here</span></p>
+            <p className='text-gray-200'>Already have account? <span onClick={()=>navigate('/login')} className='text-blue-700 underline font-bold cursor-pointer hover:text-blue-900'>Login here</span></p>
           </div>
 
           </div>

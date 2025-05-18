@@ -38,9 +38,11 @@ if(data.success)
 
 
   return (
-    <div className='flex  flex-col justify-center p-6 rounded-2xl mt-10 w-[400px] ml-[400px] bg-red-200'>
-        <h1 className='text-center text-blue-500 text-3xl underline'>Login here</h1>
-        <div className='flex justify-center flex-col gap-6 mt-4 '>
+    <div className='bg-black w-screen h-screen -mb-20 -mt-8 p-10'>
+
+    <div className='flex  flex-col justify-center p-6 rounded-2xl mt-10 w-[400px] ml-[400px] bg-gray-800'>
+        <h1 className='text-center text-blue-400 text-3xl underline'>Login here</h1>
+        <div className='flex justify-center flex-col gap-6 mt-4 text-white '>
       <div className='flex justify-center items-center gap-2'>
         <h2 className='text-xl'>Email:</h2>
         <input type="email" value={email} onChange={(e)=>setemail(e.target.value)} className='border outline-none rounded-lg  font-serif text-lg px-2' />
@@ -58,6 +60,7 @@ if(data.success)
 </div>
 
         </div>
+    </div>
     </div>
   )
 }
