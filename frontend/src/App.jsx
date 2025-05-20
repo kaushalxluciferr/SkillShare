@@ -14,6 +14,7 @@ import { useContext } from 'react'
 import { AppContext } from './context/Appcontext'
 import Allusers from './Pages/Allusers'
 import LandingPage from './Pages/LandingPage'
+import ChatBot from './Component/ChatBot/ChatBot'
 
 function App() {
 
@@ -31,7 +32,7 @@ const {user}=useContext(AppContext)
       }
       </div>
     <Routes>
-      <Route path='/' element={<LandingPage/>}/>
+      <Route path='/' element={token?<Home/>:<LandingPage/>}/>
       <Route path='/home' element={token?<Home/>:<Login/>}/>
       <Route path='/message/:id' element={token?<Message/>:<Login/>}/>
       <Route path='/profile/:id' element={token?<UserInfo/>:<Login/>}/>
@@ -39,6 +40,7 @@ const {user}=useContext(AppContext)
       <Route path='/signup' element={<SignUp/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/allApplicant' element={token?<Allusers/>:<Login/>}/>
+      <Route path='/chatbot' element={token?<ChatBot/>:<Login/>}/>
     </Routes>
     {
       token &&

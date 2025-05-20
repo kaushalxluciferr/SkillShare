@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { MessageCircle } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../../context/Appcontext'
+import Chatboticon from '../Chatboticon'
 function Navbar() {
   
   const navigate=useNavigate()
@@ -23,9 +24,11 @@ const handlelogout=()=>{
 onClick={()=>navigate('/home')}
 >SkillShare</h1>
      </div>
-     <div>
-     </div>
      <div className='flex justify-between gap-8'>
+     <div onClick={()=>navigate("/chatbot")} className='flex cursor-pointer  items-center gap-2 bg-[#6D4FC2] text-white px-2 rounded-full '>
+      <Chatboticon/>
+      <h1 className='font-bold' >AI-chatbot</h1>
+     </div>
       <div  onClick={()=>navigate(`/message/${useriid}`)} className='mt-2 bg-black text-white p-2 rounded-full flex gap-3 items-center cursor-pointer'>
         <p>Inbox</p>
       <div className='relative'>
