@@ -81,7 +81,7 @@ chatbody.scrollTop=chatbody.scrollHeight
 
 
      {/* Right: SplineBot */}
-    <div className='w-1/2   h-[450px] '>
+    <div className='w-1/2   h-[500px] '>
       <SplineBot />
     </div>
     {/* Left: ChatBot */}
