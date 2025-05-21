@@ -13,8 +13,6 @@ const [history,sethistory]=useState([{
   text:SkillshareInfo
 }])
 
-console.log(import.meta.env.VITE_API_URL);
-
 const updatebotchat=(text)=>{
   sethistory(prev=>[...prev.filter(msg=>msg.text!=="Thinking"),{role:"model",text}])
 }
@@ -66,10 +64,6 @@ const newHistory = [...history, userMessage];
     botResponse(newHistory);
   }, 600);
 };
-
-// console.log(history);
-
-
 
 useEffect(()=>{
 const chatbody=document.querySelector('.chat-body')
