@@ -3,11 +3,11 @@ import React from 'react'
 
 function AboutUS() {
   return (
-    <div className='p-4'>
+    <div className='p-4 '>
       <div className='flex justify-center'>
         <h1 className='text-4xl font-bold underline'>About Us</h1>
       </div>
-      <div className='p-4 bg-[#242424] rounded-md mt-4 flex justify-between'>
+      <div className='p-4 bg-[#0B2E33] rounded-md mt-4 flex justify-between'>
         <div className='text-white'>
             <h1 className='text-xl font-bold underline'>Want to know About us?</h1>
 

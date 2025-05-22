@@ -24,8 +24,8 @@ const {user}=useContext(AppContext)
 
 // s
   return (
-    <div className=''>
-      <div className='p-4'>
+    <div className='bg-black'>
+      <div className='p-2'>
       {
         token&& 
         <Navbar/>

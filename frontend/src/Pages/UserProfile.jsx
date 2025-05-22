@@ -106,7 +106,7 @@ const handleSave=async()=>{
         }
     }
     return (
-        <div className=''>
+        <div className='bg-white'>
             {/* image part */}
             <div className='flex justify-center cursor-pointer'>
                 {isedit ?

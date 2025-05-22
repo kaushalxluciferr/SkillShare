@@ -16,7 +16,6 @@ const tokenn=jwt.verify(token,process.env.SECRET)
 req.userId=tokenn._id
 next()
 
-
     }catch(error)
     {
         res.json({

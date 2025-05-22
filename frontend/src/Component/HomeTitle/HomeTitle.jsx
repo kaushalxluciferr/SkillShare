@@ -3,9 +3,9 @@ import React from 'react'
 function HomeTitle() {
   return (
     <div className='p-4 -mt-6 -mb-2'>
-        <div className='flex mt-6 border p-6 justify-between rounded-md bg-black'>
+        <div className='flex mt-6 border p-6 justify-between rounded-md bg-gradient-to-r from-blue-400 to-gray-400'>
 <div><h1 className='text-6xl font-bold text-blue-700'>Peer-to-peer skill <br /><span className='ml-5'>exchange platform</span></h1>
-<p className='ml-4 mt-6 text-2xl font-semibold text-white'>Find the skills you need. Share the skills you have.
+<p className='ml-4 mt-6 text-2xl font-bold text-gray-100'>Find the skills you need. Share the skills you have.
 <br /><span className='ml-6'>
 Connect with classmates to learn and share valuable skills.
 </span>

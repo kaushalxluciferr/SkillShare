@@ -5,7 +5,7 @@ function TopSkill() {
   return (
     <div>
        <div className='flex items-center justify-center mt-5'>
-      <h1 className='text-2xl font-bold underline'><span className='text-red-600'>Top</span> Skills <span className='text-green-600'>Here</span></h1>
+      <h1 className='text-2xl font-bold text-white underline'><span className='text-red-600'>Top</span> Skills <span className='text-green-600'>Here</span></h1>
         </div>
         <div className='flex justify-between  mx-20 bg-indigo-800 rounded-lg mt-4 '>
 
